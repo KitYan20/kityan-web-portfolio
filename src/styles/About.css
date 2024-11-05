@@ -1,0 +1,18 @@
+/* src/components/About.css */
+.about-container {
+    padding: 40px 20px;
+    text-align: left;
+  }
+  
+  .about-title {
+    font-size: 2em;
+    color: #4a5b67;
+    margin-bottom: 0.5em;
+  }
+  
+  .about-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #444;
+  }
+  

@@ -1,0 +1,44 @@
+/* src/components/Contact.css */
+.contact-container {
+    padding: 40px 20px;
+    
+    
+  }
+  
+  .contact-title {
+    font-size: 2em;
+    color: #4a5b67;
+    margin-bottom: 0.5em;
+  }
+  
+  .contact-info {
+    font-size: 1.1em;
+    color: #555;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-link {
+    color: #555;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .contact-link:hover .contact-icon {
+    transform: scale(1.2);
+  }
+  
+  .contact-link:hover {
+    color: #3498db;
+  }
+  
