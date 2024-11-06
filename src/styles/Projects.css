@@ -1,0 +1,75 @@
+/* src/components/Projects.css */
+.projects-container {
+    padding: 40px 20px;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fad0c4);
+    animation: gradient-animation 6s infinite alternate;
+  }
+  
+  .projects-title {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 0.5em;
+  }
+  
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .project-item {
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-item h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .project-item p {
+    color: #555;
+  }
+  
+  .github-link {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .github-link:hover {
+    opacity: 1;
+  }
+  
+  .github-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Animated Gradient Background */
+  @keyframes gradient-animation {
+    0% {
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fad0c4);
+    }
+    50% {
+      background: linear-gradient(120deg, #a18cd1, #fbc2eb, #fad0c4);
+    }
+    100% {
+      background: linear-gradient(120deg, #fad0c4, #ff9a9e, #ffdde1);
+    }
+  }
+  
