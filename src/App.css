@@ -8,11 +8,13 @@ body {
 }
 
 nav {
-  background-color: #30739d;
+  background: linear-gradient(45deg, #ff9a9e, #1d55a4, #fad0c4, #a18cd1, #fbc2eb);
+  background-size: 400% 400%;
   padding: 1em;
   display: flex;
   justify-content: center;
   gap: 1.5em;
+  animation: color-wave 30s ease infinite;
 }
 
 nav a {

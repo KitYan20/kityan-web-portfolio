@@ -1,13 +1,23 @@
 /* src/components/Contact.css */
 .contact-container {
-    padding: 40px 20px;
-    
-    
+    /* padding: 40px 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: 120%;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    color: #fff;
+    position: relative;
+    background: linear-gradient(45deg, #ff9a9e, #1d55a4, #fad0c4, #a18cd1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: color-wave 10s ease infinite;
   }
   
   .contact-title {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 2em;
-    color: #4a5b67;
+    color:White;
     margin-bottom: 0.5em;
     
   }
@@ -18,6 +28,7 @@
     margin: 10px 0;
     display: flex;
     align-items: center;
+    
     gap: 10px;
   }
   
@@ -33,6 +44,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    color:White;
   }
   
   .contact-link:hover .contact-icon {
