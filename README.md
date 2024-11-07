@@ -1,6 +1,7 @@
 # Welcome to my Personal Web Portfolio!
+Here is a personal website that I've built to display my skills and experience!
 
-## TECH STACK
+## Tech Stack
 HTML/CSS, JavaScript(React)
 
 ## Available Scripts
