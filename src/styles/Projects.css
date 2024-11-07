@@ -1,14 +1,27 @@
 /* src/components/Projects.css */
 .projects-container {
     padding: 40px 20px;
-    background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fad0c4);
-    animation: gradient-animation 6s infinite alternate;
+    /* background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fad0c4); */
+    /* animation: gradient-animation 6s infinite alternate; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    color: #fff;
+    position: relative;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #a18cd1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: color-wave 10s ease infinite;
   }
   
   .projects-title {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 2em;
     color: #2c3e50;
-    margin-bottom: 0.5em;
+    
+    margin-top: -20px;
   }
   
   .projects-list {
@@ -20,6 +33,8 @@
   }
   
   .project-item {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
     position: relative;
     padding: 20px;
     border-radius: 8px;
@@ -60,16 +75,14 @@
     height: 24px;
   }
   
-  /* Animated Gradient Background */
-  @keyframes gradient-animation {
+  @keyframes color-wave {
     0% {
-      background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fad0c4);
+      background-position: 0% 50%;
     }
     50% {
-      background: linear-gradient(120deg, #a18cd1, #fbc2eb, #fad0c4);
+      background-position: 100% 50%;
     }
     100% {
-      background: linear-gradient(120deg, #fad0c4, #ff9a9e, #ffdde1);
+      background-position: 0% 50%;
     }
   }
-  

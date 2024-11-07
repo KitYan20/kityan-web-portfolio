@@ -1,5 +1,5 @@
 // src/components/Projects.js
-import React from 'react';
+import { React, useState,useEffect } from 'react';
 import '../styles/Projects.css';
 
 // Import GitHub icon for the repository link
@@ -13,7 +13,7 @@ function Projects () {
             repoLink:'https://github.com/mhiga701/safesteps-frontend/tree/0.4.2'
         },
         {
-            title: "Harry Potter's Adventure with GPT-2 and LSTM",
+            title: "Harry Potter's with GPT-2 and LSTM",
             description: 'Fine-tuned pre-trained LLM GPT-2 model and built a custom LSTM model to generate Harry Potter-style text passages ',
             technology: 'Python/PyTorch',
             repoLink:'https://github.com/KitYan20/Text-Generation-Models',
@@ -79,9 +79,24 @@ function Projects () {
             repoLink:'https://github.com/KitYan20/Eight-Puzzle',
         },
     ];
+    const titleText = "My Projects!";
+    const [displayedText, setDisplayedText] = useState("");
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect( ()=> {
+        const intervalId = setInterval(()=> {
+            if (currentIndex < titleText.length){
+                setDisplayedText(prevText => prevText + titleText[currentIndex]);
+                setCurrentIndex(prevIndex => prevIndex + 1)
+            }else{
+                clearInterval(intervalId);
+            }
+        },100);
+        return () => clearInterval(intervalId);
+    }, [currentIndex, titleText]);
     return (
         <div className='projects-container'>
-            <h2 className='projects-title'>My Projects</h2>
+            <h2 className='projects-title'>{displayedText}</h2>
             <ul className="projects-list">
                 {projects.map((project, index) => (
                 <li key={index} className="project-item">

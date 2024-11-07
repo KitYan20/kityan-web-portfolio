@@ -1,7 +1,6 @@
 /* src/App.css */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
+  font-family: 'Courier New', Courier, monospace;  margin: 0;
   padding: 0;
   color: #333333;
   background-color: #f4f4f9;
@@ -9,7 +8,7 @@ body {
 }
 
 nav {
-  background-color: #333;
+  background-color: #30739d;
   padding: 1em;
   display: flex;
   justify-content: center;
