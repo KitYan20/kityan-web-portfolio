@@ -1,7 +1,7 @@
 // src/components/Projects.js
-import { React, useState,useEffect } from 'react';
+import { React } from 'react';
 import '../styles/Projects.css';
-
+import TextType from './Text';
 // Import GitHub icon for the repository link
 import githubIcon from '../assets/github.svg';
 function Projects () {
@@ -79,24 +79,10 @@ function Projects () {
             repoLink:'https://github.com/KitYan20/Eight-Puzzle',
         },
     ];
-    const titleText = "My Projects!";
-    const [displayedText, setDisplayedText] = useState("");
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    useEffect( ()=> {
-        const intervalId = setInterval(()=> {
-            if (currentIndex < titleText.length){
-                setDisplayedText(prevText => prevText + titleText[currentIndex]);
-                setCurrentIndex(prevIndex => prevIndex + 1)
-            }else{
-                clearInterval(intervalId);
-            }
-        },100);
-        return () => clearInterval(intervalId);
-    }, [currentIndex, titleText]);
+    const titleText = TextType("My Projects!",200);
     return (
         <div className='projects-container'>
-            <h2 className='projects-title'>{displayedText}</h2>
+            <h2 className='projects-title'>{titleText}</h2>
             <ul className="projects-list">
                 {projects.map((project, index) => (
                 <li key={index} className="project-item">

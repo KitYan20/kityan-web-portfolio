@@ -1,31 +1,17 @@
 //src/components/Contact.js
-import { React,useState,useEffect } from 'react';
+import { React } from 'react';
 import '../styles/Contact.css';
-
+import TextType from './Text';
 // Import SVG icons from the assets folder
 import emailIcon from '../assets/email.svg';
 import linkedinIcon from '../assets/linkedin.svg';
 import githubIcon from '../assets/github.svg';
 
 function Contact() {
-  const titleText = "Contact Me!";
-  const [displayedText, setDisplayedText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect( ()=> {
-      const intervalId = setInterval(()=> {
-          if (currentIndex < titleText.length){
-              setDisplayedText(prevText => prevText + titleText[currentIndex]);
-              setCurrentIndex(prevIndex => prevIndex + 1)
-          }else{
-              clearInterval(intervalId);
-          }
-      },200);
-      return () => clearInterval(intervalId);
-  }, [currentIndex, titleText]);
+  const titleText = TextType("Contact Me!",200);
   return (
     <div className="contact-container">
-      <h2 className="contact-title">{displayedText}</h2>
+      <h2 className="contact-title">{titleText}</h2>
 
       <div className="contact-info">
         <a href="mailto:kityan3002@gmail.com" className="contact-link">

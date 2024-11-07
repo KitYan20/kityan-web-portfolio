@@ -28,6 +28,7 @@
     font-size: 1.1em;
     line-height: 1.6;
     color: white;
+    margin: 10px 0;
   }
   
   @keyframes color-wave {

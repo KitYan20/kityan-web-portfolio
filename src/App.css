@@ -14,7 +14,7 @@ nav {
   display: flex;
   justify-content: center;
   gap: 1.5em;
-  animation: color-wave 30s ease infinite;
+  animation: color-wave 60s ease infinite;
 }
 
 nav a {
